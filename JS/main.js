@@ -1,3 +1,10 @@
+const weatherBox = document.querySelector(".weatherBox");
+
+weatherBox.addEventListener("click", () => {
+  location.href = "./weather.html";
+});
+
+// 메인 컨텐츠 효과
 window.addEventListener("load", () => {
   //   console.log("test");
   const mainBox = document.querySelector(".mainBox");
