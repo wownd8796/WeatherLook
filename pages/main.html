@@ -8,10 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
@@ -20,14 +16,14 @@
       src="https://kit.fontawesome.com/497450481c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../JS/main.js"></script>
+    <script src="../JS/main.js" defer></script>
   </head>
   <body>
     <div class="logoImgBox">
       <img src="../img/logo3.png" class="logo" alt="" />
     </div>
 
-    <div class="mainBox animate__animated">
+    <div class="mainBox">
       <section id="main_Sec1">
         <div class="topBox">
           <p>11:21</p>
@@ -39,20 +35,22 @@
           </div>
         </div>
 
-        <div class="mainContentBox">
-          <div class="weatherBox">
-            <span class="clickText">Click Me!</span>
+        <div class="weatherBox">
+          <span class="clickText">Click Me!</span>
 
-            <div class="weatherBox_secondText">
-              <p><img src="../img/03d.png" alt="" /></p>
-              <span>강남</span>
-              <span>-4℃</span>
-            </div>
+          <div class="weatherBox_secondText">
+            <p><img src="../img/03d.png" id="weatherIcon" alt="" /></p>
+            <span id="region">강남</span>
+            <span id="temp">-4℃</span>
           </div>
+        </div>
 
+        <div class="mainContentBox">
           <div class="bottomBox">
-            <p id="mainText">날씨에 맞는 모든 스타일이 여기에</p>
-            <div class="mainContentBox">
+            <p id="mainText" class="cssanimation sequence leRotateYZoomIn">
+              날씨에 맞는 모든 스타일이 여기에
+            </p>
+            <div class="b_mainContentBox">
               <div class="mainImgBox">
                 <p id="shirtBox"><img src="../img/shirts.png" alt="" /></p>
                 <p id="bagBox"><img src="../img/bag.png" alt="" /></p>
@@ -61,7 +59,7 @@
               </div>
               <p id="smallLogoText">Weather Look</p>
             </div>
-            <button>
+            <button onclick="location.href='./gender.html'" id="testBtn">
               <span>Go Test </span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
