@@ -88,6 +88,8 @@ body {
     top: 10%;
     opacity: 0;
     cursor: pointer;
+    border: none;
+    padding: 5px;
     .clickText {
       display: inline-block;
       color: white;
@@ -135,7 +137,7 @@ body {
         margin-right: 5px;
       }
       #region {
-        width: 60%;
+        // width: 60%;
         font-size: 13px;
       }
     }

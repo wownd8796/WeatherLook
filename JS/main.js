@@ -2,10 +2,6 @@ const weatherBox = document.querySelector(".weatherBox");
 const API_KEY = "367636d16a48743eb5074f58249138c2";
 let tempList;
 
-/* weatherBox.addEventListener("click", () => {
-  location.href = "./weather.html";
-}); */
-
 // 메인 컨텐츠 효과
 window.addEventListener("load", () => {
   //   console.log("test");
