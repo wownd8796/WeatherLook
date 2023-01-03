@@ -29,7 +29,7 @@ body {
   border: 15px solid rgb(44, 44, 44);
   border-radius: 20px;
   background-color: white;
-  opacity: 0;
+  // opacity: 0;
 
   #main_Sec1 {
     height: 100%;
@@ -185,23 +185,47 @@ body {
         p {
           width: 200px;
           margin: 0;
-          opacity: 0;
+          opacity: 1;
           transition: 0.5s;
+
           img {
             width: 250px;
           }
         }
+        @keyframes bounce {
+          0% {
+            top: 0px;
+          }
+          100% {
+            top: -20px;
+          }
+        }
         #shirtBox {
           transform: translate(20%, 10%) rotate(-10deg);
+          position: relative;
+          top: 0;
+          animation: bounce 1.5s ease infinite alternate;
         }
         #bagBox {
           transform: translate(1%, -10%) rotate(2deg) scale(1.1);
+          position: relative;
+          top: 0;
+          animation: bounce 1.5s ease infinite alternate;
+          animation-delay: 5s;
         }
         #shoesBox {
           transform: translate(-25%, 20%);
+          position: relative;
+          top: 0;
+          animation: bounce 1.5s ease infinite alternate;
+          animation-delay: 10s;
         }
         #hatBox {
           transform: translate(-30%, -15%) rotate(40deg);
+          position: relative;
+          top: 0;
+          animation: bounce 1.5s ease infinite alternate;
+          animation-delay: 15s;
         }
       }
 
@@ -221,18 +245,27 @@ body {
     button {
       background: transparent;
       border: none;
-      cursor: pointer;
+      // cursor: pointer;
       margin-top: 20px;
       margin-bottom: 50px;
       font-size: 28px;
       font-weight: bold;
       opacity: 0;
+
       &:hover {
         cursor: pointer;
+        display: block;
+        content: "";
+        border-bottom: solid 3px #ea2129;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
       }
+
       span {
         margin-right: 3px;
         color: rgb(41, 41, 41);
+      }
+      span:after {
       }
       i {
         font-size: 24px;

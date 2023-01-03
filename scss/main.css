@@ -28,7 +28,6 @@ body {
   border: 15px solid rgb(44, 44, 44);
   border-radius: 20px;
   background-color: white;
-  opacity: 0;
 }
 .mainBox #main_Sec1 {
   height: 100%;
@@ -190,23 +189,61 @@ body {
 .mainBox .bottomBox .b_mainContentBox .mainImgBox p {
   width: 200px;
   margin: 0;
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox p img {
   width: 250px;
 }
+@-webkit-keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -20px;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -20px;
+  }
+}
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #shirtBox {
   transform: translate(20%, 10%) rotate(-10deg);
+  position: relative;
+  top: 0;
+  -webkit-animation: bounce 1.5s ease infinite alternate;
+          animation: bounce 1.5s ease infinite alternate;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #bagBox {
   transform: translate(1%, -10%) rotate(2deg) scale(1.1);
+  position: relative;
+  top: 0;
+  -webkit-animation: bounce 1.5s ease infinite alternate;
+          animation: bounce 1.5s ease infinite alternate;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #shoesBox {
   transform: translate(-25%, 20%);
+  position: relative;
+  top: 0;
+  -webkit-animation: bounce 1.5s ease infinite alternate;
+          animation: bounce 1.5s ease infinite alternate;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #hatBox {
   transform: translate(-30%, -15%) rotate(40deg);
+  position: relative;
+  top: 0;
+  -webkit-animation: bounce 1.5s ease infinite alternate;
+          animation: bounce 1.5s ease infinite alternate;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
 }
 .mainBox .bottomBox .b_mainContentBox #smallLogoText {
   position: absolute;
@@ -222,7 +259,6 @@ body {
 .mainBox .bottomBox button {
   background: transparent;
   border: none;
-  cursor: pointer;
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 28px;
@@ -231,6 +267,11 @@ body {
 }
 .mainBox .bottomBox button:hover {
   cursor: pointer;
+  display: block;
+  content: "";
+  border-bottom: solid 3px #ea2129;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
 }
 .mainBox .bottomBox button span {
   margin-right: 3px;
