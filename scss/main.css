@@ -215,35 +215,37 @@ body {
   transform: translate(20%, 10%) rotate(-10deg);
   position: relative;
   top: 0;
-  -webkit-animation: bounce 1.5s ease infinite alternate;
-          animation: bounce 1.5s ease infinite alternate;
+  -webkit-animation: bounce 1.5s linear infinite alternate;
+          animation: bounce 1.5s linear infinite alternate;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #bagBox {
   transform: translate(1%, -10%) rotate(2deg) scale(1.1);
   position: relative;
   top: 0;
-  -webkit-animation: bounce 1.5s ease infinite alternate;
-          animation: bounce 1.5s ease infinite alternate;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation: bounce 1.5s linear infinite alternate;
+          animation: bounce 1.5s linear infinite alternate;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #shoesBox {
   transform: translate(-25%, 20%);
   position: relative;
   top: 0;
-  -webkit-animation: bounce 1.5s ease infinite alternate;
-          animation: bounce 1.5s ease infinite alternate;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
+  -webkit-animation: bounce 1.5s linear infinite alternate;
+          animation: bounce 1.5s linear infinite alternate;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #hatBox {
   transform: translate(-30%, -15%) rotate(40deg);
   position: relative;
   top: 0;
-  -webkit-animation: bounce 1.5s ease infinite alternate;
-          animation: bounce 1.5s ease infinite alternate;
-  -webkit-animation-delay: 15s;
-          animation-delay: 15s;
+  -webkit-animation: bounce 1.5s linear infinite alternate;
+          animation: bounce 1.5s linear infinite alternate;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 .mainBox .bottomBox .b_mainContentBox #smallLogoText {
   position: absolute;
@@ -267,25 +269,27 @@ body {
 }
 .mainBox .bottomBox button:hover {
   cursor: pointer;
-  display: block;
-  content: "";
-  border-bottom: solid 3px #ea2129;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
 }
-.mainBox .bottomBox button span {
+.mainBox .bottomBox button .testBtnText {
   margin-right: 3px;
   color: rgb(41, 41, 41);
+  border-radius: 50px;
 }
-.mainBox .bottomBox button i {
-  font-size: 24px;
+.mainBox .bottomBox button .testBtnText::before {
+  content: "";
+  display: block;
+  border-radius: 50px;
+  width: 25%;
+  background: #00f0b5;
 }
-
-#mainBoxShow {
+.mainBox .bottomBox button .testBtnText:hover::after {
+  background: #00f0b5;
+  width: 100%;
+}
+.mainBox #mainBoxShow {
   -webkit-animation: 3s mainBoxShowOn forwards;
           animation: 3s mainBoxShowOn forwards;
 }
-
 @-webkit-keyframes mainBoxShowOn {
   from {
     opacity: 0;
@@ -296,7 +300,6 @@ body {
     transform: translateY(0px);
   }
 }
-
 @keyframes mainBoxShowOn {
   from {
     opacity: 0;
@@ -307,11 +310,10 @@ body {
     transform: translateY(0px);
   }
 }
-.contentShow {
+.mainBox .contentShow {
   -webkit-animation: 1.5s contentShowOn forwards;
           animation: 1.5s contentShowOn forwards;
 }
-
 @-webkit-keyframes contentShowOn {
   from {
     opacity: 0;
@@ -322,7 +324,6 @@ body {
     transform: translateY(0px);
   }
 }
-
 @keyframes contentShowOn {
   from {
     opacity: 0;
@@ -333,11 +334,10 @@ body {
     transform: translateY(0px);
   }
 }
-.imgContentShow {
+.mainBox .imgContentShow {
   -webkit-animation: 1.5s imgContentShowOn forwards;
           animation: 1.5s imgContentShowOn forwards;
 }
-
 @-webkit-keyframes imgContentShowOn {
   from {
     opacity: 0;
@@ -346,7 +346,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes imgContentShowOn {
   from {
     opacity: 0;

@@ -204,28 +204,29 @@ body {
           transform: translate(20%, 10%) rotate(-10deg);
           position: relative;
           top: 0;
-          animation: bounce 1.5s ease infinite alternate;
+          animation: bounce 1.5s linear infinite alternate;
+          animation-delay: 0.35s;
         }
         #bagBox {
           transform: translate(1%, -10%) rotate(2deg) scale(1.1);
           position: relative;
           top: 0;
-          animation: bounce 1.5s ease infinite alternate;
-          animation-delay: 5s;
+          animation: bounce 1.5s linear infinite alternate;
+          animation-delay: 0.7s;
         }
         #shoesBox {
           transform: translate(-25%, 20%);
           position: relative;
           top: 0;
-          animation: bounce 1.5s ease infinite alternate;
-          animation-delay: 10s;
+          animation: bounce 1.5s linear infinite alternate;
+          animation-delay: 1s;
         }
         #hatBox {
           transform: translate(-30%, -15%) rotate(40deg);
           position: relative;
           top: 0;
-          animation: bounce 1.5s ease infinite alternate;
-          animation-delay: 15s;
+          animation: bounce 1.5s linear infinite alternate;
+          animation-delay: 1.5s;
         }
       }
 
@@ -245,7 +246,6 @@ body {
     button {
       background: transparent;
       border: none;
-      // cursor: pointer;
       margin-top: 20px;
       margin-bottom: 50px;
       font-size: 28px;
@@ -254,65 +254,73 @@ body {
 
       &:hover {
         cursor: pointer;
-        display: block;
-        content: "";
-        border-bottom: solid 3px #ea2129;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
       }
 
-      span {
+      .testBtnText {
         margin-right: 3px;
         color: rgb(41, 41, 41);
-      }
-      span:after {
-      }
-      i {
-        font-size: 24px;
+        border-radius: 50px;
+        // background-color: violet;
+        &::before {
+          content: "";
+          display: block;
+          border-radius: 50px;
+          width: 25%;
+          background: #00f0b5;
+        }
+        &:hover {
+          &::after {
+            background: #00f0b5;
+            width: 100%;
+          }
+        }
+        // i {
+        //   font-size: 24px;
+        // }
       }
     }
   }
-}
 
-#mainBoxShow {
-  animation: 3s mainBoxShowOn forwards;
-}
-
-@keyframes mainBoxShowOn {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
+  #mainBoxShow {
+    animation: 3s mainBoxShowOn forwards;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
-.contentShow {
-  animation: 1.5s contentShowOn forwards;
-}
-
-@keyframes contentShowOn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+  @keyframes mainBoxShowOn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
-.imgContentShow {
-  animation: 1.5s imgContentShowOn forwards;
-}
-
-@keyframes imgContentShowOn {
-  from {
-    opacity: 0;
+  .contentShow {
+    animation: 1.5s contentShowOn forwards;
   }
-  to {
-    opacity: 1;
+
+  @keyframes contentShowOn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .imgContentShow {
+    animation: 1.5s imgContentShowOn forwards;
+  }
+
+  @keyframes imgContentShowOn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
